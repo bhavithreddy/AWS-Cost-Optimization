@@ -25,9 +25,7 @@ Lambda · EventBridge · SNS · CloudWatch · IAM · Python 3.12 · boto3
 
 ## Setup
 
-Full step-by-step walkthrough is in `docs/AWS-Cost-Optimizer-Beginners-Guide.docx`. Short version:
-
-1. Create an IAM role `CostOptimizerLambdaRole` and attach the policy from `iam/lambda_execution_policy.json`
+1. Create an IAM role `CostOptimizerLambdaRole` and attach the policy from `lambda_execution_policy.json`
 2. Create an SNS topic, subscribe your email, confirm the subscription
 3. Rename each `handler.py` file, zip it, upload to a separate Lambda function
 4. Set environment variables on each function (SNS ARN, region, thresholds)
