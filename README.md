@@ -1,6 +1,6 @@
 # AWS Cost Optimization — Lambda Automation
 
-Serverless automation that scans your AWS account for wasted resources and emails you a report. Built entirely on Free Tier.
+Serverless automation that scans your AWS account for wasted resources and emails you a report.
 
 ---
 
@@ -22,20 +22,6 @@ Lambda · EventBridge · SNS · CloudWatch · IAM · Python 3.12 · boto3
 
 ---
 
-## Project structure
-
-```
-├── lambda/
-│   ├── cost_optimizer/handler.py
-│   ├── scheduler/handler.py
-│   └── snapshot_cleaner/handler.py
-├── iam/
-│   └── lambda_execution_policy.json
-└── docs/
-    └── AWS-Cost-Optimizer-Beginners-Guide.docx
-```
-
----
 
 ## Setup
 
@@ -60,13 +46,6 @@ Full step-by-step walkthrough is in `docs/AWS-Cost-Optimizer-Beginners-Guide.doc
 | `DRY_RUN` | snapshot_cleaner | `true` to report only |
 
 ---
-
-## Cost
-
-$0.00/month. The functions run ~250 times total per month — Lambda's free tier covers 1,000,000.
-
----
-
 ## Tagging
 
 The scheduler only touches instances tagged `AutoSchedule=true`. Anything without that tag is ignored, even if the Lambda has permission to stop it.
